@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG IN</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/user.css'%}">
+    <style>
+        body{
+    font-family: sans-serif;
+    background-image: url({%static 'images/one.jpg'%});
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+}
+    </style>
+
+</head>
+<body >
+<div class="container">
+    <div class="header">
+        <h2 class="title">LOG IN</h2>
+    </div>
+    <div class="main">
+        <form action="login" method="post">
+            {% csrf_token %}
+            <span>
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="USER NAME" name="username">
+            </span><br>
+            <span>
+                <input type="password" placeholder="PASSWORD" name="password">
+            </span><br>
+            <input type="submit" class="butt1">
+
+        </form>
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>
